@@ -131,7 +131,6 @@ function updateMood(){
  document.getElementById("recommendation").innerHTML="<b>"+m.playlist+"</b><br>"+(m.cats.length?m.cats.join(" • "):"No music / very low volume")+"<br><small>"+m.starter+"</small>";
  document.getElementById("reqMood").value=select.value;
 }
-function jump(cat){document.getElementById("cat-"+slug(cat)).scrollIntoView({behavior:"smooth"});}
 function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,"-");}
 function getFav(){return JSON.parse(localStorage.getItem("rideFavs")||"[]");}
 function setFav(x){localStorage.setItem("rideFavs",JSON.stringify(x));renderFavorites();}
